@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function count(start, end) {
+            console.log(start++);
+            var intervalId = setInterval(function() {
+                if (start <= end) {
+                    console.log(start++);
+                } else {
+                    clearInterval(intervalId);
+                };
+            }, 100);
+            return {
+                cancel: function() {
+                    clearInterval(intervalId);
+                }
+            }
+        };
+        count(1, 10);
+    </script>
+</body>
+
+</html>

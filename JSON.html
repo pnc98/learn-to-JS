@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <div class="json"></div>
+    <script>
+        //json数据格式
+        //向服务器端发送json数据时，要使用stringify()将json格式数据转换成字符串
+        //接收服务棋的数据时，要使用parse()将字符串解析成JavaScript对象
+        var jsonObject = {
+            "name": "park",
+            "age": 22,
+            "like": "footbal"
+        }
+        var jsonDate = document.querySelector('.json');
+        jsonDate.innerHTML = jsonObject.name + '今年' + jsonObject.age + '岁';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        //延迟函数
+        var timeOutId = setTimeout(function() {
+                document.body.style.backgroundColor = 'pink';
+            }, 3000) //毫秒
+
+        //取消延迟函数
+        setTimeout(function() {
+            clearTimeout(timeOutId)
+        }, 2000);
+
+        //间隔函数
+        var intervalId = setInterval(function() {
+            var time = new Date();
+            document.body.innerHTML = time;
+        }, 1000);
+
+        //取消间隔函数
+        setTimeout(function() {
+            clearInterval(intervalId);
+        }, 3000);
+    </script>
+</body>
+
+</html>

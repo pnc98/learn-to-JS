@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            var type = '123';
+            var name = 'nan';
+            var format = ['one','two'];
+            var change = function(type,name,format){
+                type = '456';
+                name = 'zhe';
+                format.push('three');
+            };
+            
+            change(type,name,format);
+            console.log(type);
+            console.log(name);
+            console.log(format);
+        </script>
+    </body>
+</html>

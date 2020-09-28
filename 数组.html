@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        //数组可以存放任意类型的数据，没有长度的限制
+
+        //1.字面量形式创建数组
+        var city = ['beijing', 'shanghai', 'guangzhou'];
+        console.log(city);
+        //2.构造函数形式创建数组
+        var country = new Array('China', 'English', 'Korea');
+        console.log(country);
+
+        //在数组的最后面添加数据
+        city.push('shenzhen');
+        console.log(city);
+
+        //将数组中最后一个数据删除(会将删除的数据返回)
+        city.pop();
+        console.log(city);
+
+        //将数组的第一个数据删除(返回删除的数据)
+        city.shift();
+        console.log(city);
+
+        //在数组的最前面添加数据
+        city.unshift('shanghai');
+        console.log(city);
+
+        //提取数组中任意位置的数据,不会改变原数组
+        var newcity = city.slice(1, 2);
+        console.log(newcity);
+
+        //删除数组中任意位置的数据,会改变原数组
+        //splice(索引值，要删除的数量，添加的数据)
+        city.splice(1, 1);//返回删除的数据
+        console.log(city);
+
+        //在数组中任意位置添加数据，会改变原数组
+        city.splice(1, 0, 'shenzhen');
+        console.log(city);
+
+        //合并数组,不改变原数组
+        var newarr = city.concat(country);
+        console.log(newarr);
+
+        //数组转换成字符串,不会改变原数组
+        var boxes = city.join('---');
+        console.log(boxes);
+
+        //将数组中的数据反转，会改变原数组
+        var fan = city.reverse();
+        console.log(fan);
+
+        //遍历数组
+        city.forEach(function (item) {
+            console.log(item);
+        });
+
+        //将数组中的每个数据执行函数执行函数操作,不会改变原数组
+        var num1 = [1, 2, 3, 4, 5]
+        var num2 = num1.map(function (item) {
+            return item * 2;
+        });
+        console.log(num2);
+
+        //创建一个数据通过条件的数组,不会改变原数组
+        var newnum1 = num1.filter(function (item) {
+            return item > 3
+        });
+        console.log(newnum1);
+
+        //在每个数组元素上运行函数，把它变成单个值
+        var all = num1.reduce(function(total,item){
+            return total + item
+        });
+        console.log(all);
+
+        //检查数组中所有数据是否都满足条件(所有数据都满足条件时，才会返回true)
+        var isTure = num1.every(function(item){
+            return item > 0;
+        });
+        console.log(isTure);
+
+        //检查数组中是否有某些数据满足条件(只要有一个数据满足条件，就会返回true)
+        var isSome = num1.some(function(item){
+            return item > 3;
+        });
+        console.log(isSome);
+
+        //从前向后查找数据在数组中的位置并返回索引值
+        var p = num1.indexOf(2);
+        console.log(p);
+
+        //从后向前查找数据在数组中的位置并返回索引值
+        var p2 = num1.lastIndexOf(2);
+        console.log(p2);
+
+        //返回符合条件的第一个数据的值
+        var first = num1.find(function(item){
+            return item > 2;
+        });
+        console.log(first);
+
+        //返回符合条件的第一个数据的索引值
+        var p3 = num1.findIndex(function(item,i){
+            return item > 2;
+        });
+        console.log(p3);
+    </script>
+</body>
+
+</html>

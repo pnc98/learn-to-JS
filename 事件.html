@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #d1{
+                width: 200px;
+                height: 200px;
+                background-color: skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1" onclick="change()"></div>
+        <script>
+            //更改背景颜色
+            var change = function(){
+                var d1 = document.querySelector('#d1');
+                if(d1.style.backgroundColor=='skyblue'){
+                    d1.style.backgroundColor = 'orange';
+                }else{
+                    d1.style.backgroundColor = 'skyblue';
+                }
+                
+            };
+        </script>
+    </body>
+</html>

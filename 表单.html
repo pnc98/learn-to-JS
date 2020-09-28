@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <form action="" method="GET" name="myform">
+        username: <input type="text" name="username" value=""><br>
+        password: <input type="password" name="password" value=""><br>
+        <input type="submit" value="submit"><br>
+        <button type="button" onclick="fn()">点我加一</button>
+        <p id="demo"></p>
+    </form>
+    <script>
+        //闭包
+        var a = (function () {
+            var b = 1;
+            return function () {
+                return b += 1;
+            };
+        })();
+        var fn = function () {
+            document.getElementById("demo").innerHTML = a();
+        };
+    </script>
+</body>
+
+</html>

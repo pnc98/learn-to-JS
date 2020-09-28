@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+        <style>
+            .d1{
+                width: 50%;
+                height: 200px;
+                background: blue;
+            }
+            /* 
+                媒体查询//使用媒体查询时，必须加上meta viewport
+                当宽度在600px和1200px之间时
+             */
+            @media only screen and (max-width: 1200px) and (min-width: 600px){
+                .d1{
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="d1">
+            <p>前端单位：</p>
+            <p>px:像素单位</p>
+            <p>em:相对单位，相对于父元素的大小</p>
+            <p>rem:相对单位，相对于根元素root的大小（配合JS的rem布局）</p>
+            <p>vw:viewport width 视窗的宽度，百分比宽度</p>
+            <p>vh:viewport height 视窗的高度，百分比高度</p>
+        </div>
+    </body>
+</html>

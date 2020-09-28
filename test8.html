@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        //查找数组元素位置
+        // function indexOf(arr, item) {
+        //     for (var i = 0; i <= arr.length; i++) {
+        //         if (arr[i] == item) {
+        //             return i;
+        //         }
+        //     };
+        //     return -1;
+        // };
+        // console.log(indexOf);
+        // var num = [1, 2, 3, 4]
+        // console.log(num);
+        // console.log(indexOf(num, 2));
+
+
+        //数组求和
+        // function sum(arr) {
+        //     return arr.reduce(function(total, value) {
+        //         return total += value;
+        //     })
+        // };
+        // console.log(sum([1, 2, 3, 4]));
+
+
+        //移除数组中的元素,不改变原数组
+        // function remove(arr, item) {
+        //     var newArr = arr.filter(function(value) {
+        //         return value != item;
+        //     });
+        //     return newArr;
+        // };
+        // console.log(remove([1, 2, 3, 4, 2], 2));
+
+
+        //移除数组中的元素，改变原数组
+        // function removeWithoutCopy(arr, item) {
+        //     arr = arr.filter(function(value) {
+        //         return value != item;
+        //     });
+        //     return arr;
+        // };
+        // console.log(removeWithoutCopy([1, 2, 2, 3, 4, 2, 2], 2));
+
+
+        //在数组末尾添加元素，不改变原数组
+        // function append(arr, item) {
+        //     var newArr = arr.slice(0);
+        //     newArr.push(item);
+        //     console.log(arr);
+        //     return newArr;
+        // }
+        // var num = [1, 2, 3, 4];
+        // console.log(append(num, 10));
+
+        //删除数组最后一个元素，不改变原数组
+        //     function truncate(arr) {
+        //         var newArr = arr.slice(0);
+        //         newArr.pop();
+        //         console.log(arr);
+        //         return newArr;
+        //     };
+        //     console.log(truncate([1, 2, 3, 4]));
+        //
+
+
+        //在数组的首位添加元素，不改变原数组
+        // function prepend(arr, item) {
+        //     var newArr = arr.slice(0);
+        //     newArr.unshift(item);
+        //     console.log(arr);
+        //     return newArr;
+        // };
+        // console.log(prepend([1, 2, 3, 4], 10));
+
+
+        //删除数组中的第一个元素，不改变原数组
+        // function curtail(arr) {
+        //     var newArr = arr.slice(0);
+        //     newArr.shift();
+        //     console.log(arr);
+        //     return newArr;
+        // };
+        // console.log(curtail([1, 2, 3, 4]));
+
+
+        //数组合并
+        // function concat(arr1, arr2) {
+        //     var newArr = arr1.concat(arr2);
+        //     return newArr;
+        // };
+        // var arr1 = [1, 2, 3, 4];
+        // var arr2 = ['a', 'b', 'c', 1];
+        // console.log(concat(arr1, arr2));
+
+
+        //在数组中随机的位置添加元素，不改变原数组
+        // function insert(arr, item, index) {
+        //     var newArr = arr.slice(0);
+        //     newArr.splice(index, 0, item);
+        //     return newArr;
+        // };
+        // console.log(insert([1, 2, 3, 4], 'z', 2));
+
+
+        //统计元素在数组中出现的次数
+        // function count(arr, item) {
+        //     var count = 0;
+        //     for (var i = 0; i < arr.length; i++) {
+        //         if (arr[i] == item) {
+        //             count++;
+        //         };
+        //     };
+        //     return count;
+        // };
+        // console.log(count([1, 2, 4, 4, 3, 4, 3], 3));
+
+
+        //找出数组中重复出现的元素
+        // function duplicates(arr) {
+        //     var newArr = [];
+        //     arr.forEach(function(value) {
+        //         if (arr.indexOf(value) != arr.lastIndexOf(value) && newArr.indexOf(value) == -1) {
+        //             newArr.push(value);
+        //         };
+        //     });
+        //     return newArr;
+        // };
+        // console.log(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3]));
+
+
+        //对每个元素进行求二次方
+        // function square(arr) {
+        //     return arr.map(function(value) {
+        //         return value * value
+        //     });
+        // };
+        // console.log(square([1, 2, 3, 4]));
+
+
+        //查找元素位置并返回索引值
+        // function findAllOccurrences(arr, target) {
+        //     var newArr = [];
+        //     for (var i = 0; i < arr.length; i++) {
+        //         if (arr[i] == target) {
+        //             newArr.push(i);
+        //         };
+        //     };
+        //     return newArr;
+        // };
+        // console.log(findAllOccurrences(['a', 'b', 'c', 'd', 'e', 'f', 'a', 'b', 'c'], 'a'));
+    </script>
+</body>
+
+</html>

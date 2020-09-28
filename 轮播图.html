@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="swiper.css">
+</head>
+
+<body>
+    <div class="swiper">
+        <div class="imgList">
+            <div class="imgItem active" style="background-image: url(image/IU1.jpg);"></div>
+            <div class="imgItem" style="background-image: url(image/IU2.jpg);"></div>
+            <div class="imgItem" style="background-image: url(image/IU3.jpg);"></div>
+            <div class="imgItem" style="background-image: url(image/IU4.jpg);"></div>
+            <div class="imgItem" style="background-image: url(image/IU6.jpg);"></div>
+        </div>
+        <div class="btnList">
+            <div class="btn pre">
+                < </div>
+                    <div class="btn next"> > </div>
+            </div>
+            <div class="circleList">
+                <div id="c0" class="btnCircle change"></div>
+                <div id="c1" class="btnCircle"></div>
+                <div id="c2" class="btnCircle"></div>
+                <div id="c3" class="btnCircle"></div>
+                <div id="c4" class="btnCircle"></div>
+            </div>
+        </div>
+        <script>
+            var preBtn = document.querySelector('.btnList>.pre');
+            var nextBtn = document.querySelector('.btnList>.next');
+            var imgItem = document.querySelectorAll('.imgItem');
+            var btnCircle = document.querySelectorAll('.btnCircle');
+            console.log(btnCircle);
+            var counter = 0;
+
+            preBtn.onclick = function() {
+                counter -= 1;
+                if (counter < 0) {
+                    counter = imgItem.length - 1;
+                }
+                //清除active
+                imgItem.forEach(function(item, i) {
+                    item.classList.remove('active');
+                });
+
+                btnCircle.forEach(function(item, i) {
+                    item.classList.remove('change');
+                })
+
+                //添加active
+                imgItem[counter].classList.add('active');
+                btnCircle[counter].classList.add('change');
+            };
+
+            nextBtn.onclick = function() {
+                counter += 1;
+                if (counter >= imgItem.length) {
+                    counter = 0;
+                }
+                //清除active
+                imgItem.forEach(function(item, i) {
+                    item.classList.remove('active');
+                });
+                btnCircle.forEach(function(item, i) {
+                    item.classList.remove('change');
+                })
+
+                //添加active
+                imgItem[counter].classList.add('active');
+                btnCircle[counter].classList.add('change');
+            };
+
+            btnCircle.forEach(function(item, i) {
+                item.onclick = function() {
+                    var index = parseInt(item.id[1]);
+                    counter = index;
+
+                    imgItem.forEach(function(item, i) {
+                        item.classList.remove('active');
+                    });
+                    btnCircle.forEach(function(item, i) {
+                        item.classList.remove('change');
+                    });
+
+                    imgItem[counter].classList.add('active');
+                    btnCircle[counter].classList.add('change');
+                };
+            })
+        </script>
+</body>
+
+</html>

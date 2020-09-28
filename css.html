@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            [date-src]{
+                width: 60px;
+                height: 60px;
+                background-color: indianred;
+            }
+            [date-src=abc]{
+                border: 3px solid greenyellow;
+            }
+            /* 子元素选择器 */
+            li:nth-child(2){
+                background: skyblue;
+            }
+            /* 直接子元素 */
+            .first>div{
+                width: 60px;
+                height: 60px;
+                background: red;
+            }
+            /* 选择元素后面的一个元素 */
+            .one+div{
+                width: 60px;
+                height: 60px;
+                background: pink;
+            }
+            /* 选择元素后面的多个元素 */
+            .two~div{
+                width: 60px;
+                height: 60px;
+                background: purple;
+            }
+        </style>
+    </head>
+    <body>
+        <div date-src=""></div>
+        <div date-src="abc"></div>
+        <ul>
+            <li>内容1</li>
+            <li>内容2</li>
+            <li>内容3</li>
+            <li>内容4</li>
+            <li>内容5</li>
+            <li>内容6</li>
+            <li>内容7</li>
+            <li>内容8</li>
+            <li>内容9</li>
+            <li>内容10</li>
+        </ul>
+        <div class="first">
+            <div class="second">
+                <div class="third"></div>
+            </div>
+        </div>
+        <div>
+            <div class="one"></div>
+            <div>park</div>
+            <div>park2</div>
+        </div>
+        <div>
+            <div class="two"></div>
+            <div>park</div>
+            <div>park2</div>
+        </div>
+    </body>
+</html>

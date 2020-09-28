@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>helloworld</h1>
+        <p id="demo">hellow</p>
+        <p class="abc">abc</p>
+        <script>
+            // var html = document.children[0];
+            // var body = html.children[1];
+            // body.innerHTML = '<h1>helloworld</h1>';
+
+            //通过元素名称获取多个标签
+            var h1s = document.getElementsByTagName('h1');
+            console.log(h1s);
+
+            //通过ID名称获取元素
+            var a = document.getElementById('demo');
+            console.log(a);
+
+            //通过属性class获取多个元素
+            var abc = document.getElementsByClassName('abc');
+            console.log(abc);
+
+            //获取一个元素
+            var d = document.querySelector('.abc');
+            console.log(d);
+
+            //document.querySelectorAll()获取所有匹配到的元素
+
+            //1.创建元素
+            var h1 = document.createElement('h1');
+            //2.设置元素
+            h1.innerHTML = '中午吃什么？';
+            //3.找到被插入的元素
+            var d1 = document.querySelector('#demo');
+            //4.插入元素
+            d1.appendChild(h1);
+            //在哪个元素前插入使用insertBefore(插入的节点，参考的节点)
+
+            //删除元素
+            //父元素.removeChild(子元素)
+            var body = document.querySelector('body');
+            var s = document.querySelector('.abc');
+            body.removeChild(s);
+        </script>
+    </body>
+</html>

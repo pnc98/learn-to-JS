@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            //用当前日期和时间创建日期对象，日期对象是静态了，不会改变
+            var d = new Date();
+            console.log(d);
+
+            //用指定的日期和时间创建新的日期对象，不能省略月份，否则视为毫秒
+            var d2 = new Date(2018,10,11,9,5,2,0);//JavaScript从0到11计算月份，0代表一月，11代表12月
+            console.log(d2);
+
+            //从日期字符串创建一个新的日期对象
+            var d3 = new Date("October 13,2020 13:24:3");
+            console.log(d3);
+
+            //获取日期的方法
+            //1.以4位数的形式返回年份
+            console.log(d.getFullYear());
+
+            //2.以数字0-11返回月份,0代表一月，11代表12月
+            console.log(d.getMonth());
+
+            //3.以数字1-31返回日
+            console.log(d.getDate());
+
+            //4.以数字0-23返回小时
+            console.log(d.getHours());
+
+            //5.以数字0-59返回分钟
+            console.log(d.getMinutes());
+
+            //6.以数字0-59返回秒
+            console.log(d.getSeconds());
+
+            //7.以数字0-6返回星期.0代表星期日，以此类推
+            console.log(d.getDay());
+        </script>
+    </body>
+</html>

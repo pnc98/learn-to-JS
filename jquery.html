@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        $("div").click(function() {
+            $("div").animate({
+                width: '500px',
+                height: '500px'
+            }, function() {
+                var divBtn = document.querySelector('div');
+                divBtn.innerHTML = '变大';
+            })
+        })
+    </script>
+</body>
+
+</html>

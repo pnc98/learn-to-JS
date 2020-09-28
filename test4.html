@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script src="getAjax.js" type="text/javascript"></script>
+    <script>
+        getAjax("GET", "123.txt", function(xhr) {
+            var res = xhr.response;
+            var h1 = document.createElement('h1');
+            h1.innerHTML = res;
+            document.body.appendChild(h1);
+        })
+    </script>
+</body>
+
+</html>

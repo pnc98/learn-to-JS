@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <p>5个基本数据类型：String（字符串），Number（数值），Boolean（布尔值），Null（空值），undefined（未定义）</p>
+    <p>1个引用数据类型：Object（对象）</p>
+    <script>
+        //JavaScript在解释执行前，有预编译的过程，会将变量声明提升到最前面，但是不会将赋值提升
+        //任意类型数据+字符串，都会转换成字符串
+        //NaN是一个特殊的数字，非数值，typeof返回number
+        var x = 1;//赋值式的声明
+        var z;//单纯的声明,声明没有赋值的情况下，会默认赋值为undefined
+        var a = prompt("请输入第一个数字");
+        var a1 = parseInt(a)//将字符串转换成整数
+        var b = prompt("请输入第二个数字");
+        var b1 = parseInt(b)
+        document.write(a1 + b1);
+        console.log(typeof a1);//typeof 获取变量的类型，返回值都是字符串  注意：空值Null会返回Object
+    </script>
+</body>
+
+</html>
